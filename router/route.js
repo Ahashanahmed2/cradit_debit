@@ -8,7 +8,7 @@ const api = require('../server/controle/control');
 
 
 router.get('/',(req,res)=>{
-   axios.get('http://localhost:3000/api/find')
+   axios.get(`process.env.WEB-URL/api/find`)
    .then((da)=>{
      let d = da.data;
      let a =0;
