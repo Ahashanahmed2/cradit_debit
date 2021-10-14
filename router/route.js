@@ -8,7 +8,7 @@ const api = require('../server/controle/control');
 
 
 router.get('/',(req,res)=>{
-   axios.get("https://credit-debit.herokuapp.com/api/find")
+   axios.get(`${process.env.WEB_URL}api/find`)
    .then((da)=>{
      let d = da.data;
      let a =0;
