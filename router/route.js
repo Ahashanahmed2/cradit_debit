@@ -7,8 +7,8 @@ const axios = require('axios');
 const api = require('../server/controle/control');
 
 
-router.get('/',(req,res)=>{
-   axios.get(`${process.env.WEB_URL}api/find`)
+router.get('/',async(req,res)=>{
+  await axios.get(`${process.env.WEB_URL}api/find`)
    .then((da)=>{
      let d = da.data;
      let a =0;
