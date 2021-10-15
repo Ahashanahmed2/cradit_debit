@@ -10,13 +10,20 @@ exports.create = (req,res)=>{
         return;
     };
 
+let d =new Date();
+let date = d.getDate();
+let month = d.getMonth();
+let year = d.getFullYear();
 
+let h = d.getHours();
+let m = d.getMinutes();
+let s = d.getSeconds();
 
 new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
-date:moment().locale('en').format("ddd,MMM,YY,h:mm:ss a"),
+date:`${date},${month},${year}/${h}:${m}:${s}`,
 dat:new Date()
 
 
