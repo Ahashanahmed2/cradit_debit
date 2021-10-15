@@ -12,7 +12,7 @@ exports.create = (req,res)=>{
 
 
 
-await new Dd({
+new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
