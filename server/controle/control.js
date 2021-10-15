@@ -30,8 +30,8 @@ res.send({message:err.message});
 })
 }
 
-exports.find = async(req,res)=>{
-   await Dd.find().sort('-dat')
+exports.find =(req,res)=>{
+   Dd.find().sort('-dat')
     .then((data)=>{
         res.send(data)
     })
