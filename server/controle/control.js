@@ -17,14 +17,14 @@ let year = d.getFullYear();
 
 let h = d.getHours();
 let m = d.getMinutes();
-let mi = m+8
+ m +=8;
 let s = d.getSeconds();
 
 new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
-date:`${date},${month},${year}/${h}:${mi}:${s}`,
+date:`${date},${month},${year}/${h}:${m}:${s}`,
 dat:new Date()
 
 
