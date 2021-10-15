@@ -4,7 +4,7 @@ const moment = require('moment')
 //database connect
 const Dd = require('../modal/input')
 
-exports.create =(req,res)=>{
+exports.create = async (req,res)=>{
     if(!req.body){
         res 
         return;
@@ -12,11 +12,11 @@ exports.create =(req,res)=>{
 
 
 
-new Dd({
+await new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
-date:moment(new Date()).format("ddd-MMM-YY,h:mm:ss a"),
+date:moment.locale().format("ddd-MMM-YY,h:mm:ss a"),
 dat:new Date()
 
 
@@ -30,8 +30,8 @@ res.send({message:err.message});
 })
 }
 
-exports.find = (req,res)=>{
-    Dd.find().sort('-dat')
+exports.find = async(req,res)=>{
+   await Dd.find().sort('-dat')
     .then((data)=>{
         res.send(data)
     })
