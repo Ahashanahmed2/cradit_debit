@@ -16,7 +16,7 @@ new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
-date:moment.locale().format("ddd-MMM-YY,h:mm:ss a"),
+date:moment().format("ddd-MMM-YY,h:mm:ss a"),
 dat:new Date()
 
 
