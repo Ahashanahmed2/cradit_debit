@@ -15,7 +15,7 @@ router.get('/',async(req,res)=>{
      let b =0;
      let c =0;
      for(let x in d){
-         a+=d[x]._Id
+       
          a+=d[x].bank;
          b+=d[x].hand;
          c+=d[x].credit;
@@ -28,7 +28,7 @@ router.get('/',async(req,res)=>{
      if(!c == ''){
         f = b-c;
      }
-     
+     console.log(e);
     res.render('index',{user:da.data,bank:e,hand:f,credit:c})
    })
    .catch((err=>{
