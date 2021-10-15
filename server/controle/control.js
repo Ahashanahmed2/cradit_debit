@@ -4,7 +4,7 @@ const moment = require('moment')
 //database connect
 const Dd = require('../modal/input')
 
-exports.create = async (req,res)=>{
+exports.create = (req,res)=>{
     if(!req.body){
         res 
         return;
