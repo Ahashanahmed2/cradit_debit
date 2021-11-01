@@ -19,11 +19,11 @@ router.get('/',async(req,res)=>{
      let c =0;
      for(let x in db_data){
        
-         a+=d[x].bank;
-         b+=d[x].hand;
-         c+=d[x].credit;
+         a+=db_data[x].bank;
+         b+=db_data[x].hand;
+         c+=db_data[x].credit;
      }
-     
+
      let e =0;
         e = a-b;
      
