@@ -29,7 +29,7 @@ router.get('/',async(req,res)=>{
         f = b-c;
      }
      console.log(e);
-    res.render('index',{user:da.data,bank:e,hand:f,credit:c})
+    res.render('index',{user:d,bank:e,hand:f,credit:c})
    })
    .catch((err=>{
        res.status(450).send({message:err.message})

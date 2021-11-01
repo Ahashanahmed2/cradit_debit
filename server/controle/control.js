@@ -16,8 +16,9 @@ new Dd({
 bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
-date:moment().locale('en').format("dd,MM,YY-h:mm:ss a"),
-dat:new Date()
+
+date:moment.tz("Asia/Kuala_Lumpur").format("llll"),
+
 
 
 
@@ -31,7 +32,7 @@ res.send({message:err.message});
 }
 
 exports.find =(req,res)=>{
-   Dd.find().sort('-dat')
+   Dd.find().sort('-date')
     .then((data)=>{
         res.send(data)
     })
