@@ -13,7 +13,7 @@ credit:{
     type:Number
 },
 date:{
-    type:String
+    type:Date
     
 },
 
