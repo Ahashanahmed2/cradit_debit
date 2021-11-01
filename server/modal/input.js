@@ -16,10 +16,7 @@ date:{
     type:String
     
 },
-dat:{
-    type:Date,
-    default:Date.now
-}
+
 });
 
 const inputData = mongoose.model('Input',s);
