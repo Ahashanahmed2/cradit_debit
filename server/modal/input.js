@@ -17,7 +17,8 @@ date:{
     
 },
 dat:{
-    type:Date
+    type:Date,
+    default:Date.now
 }
 });
 

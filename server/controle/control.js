@@ -3,7 +3,7 @@
 const moment = require('moment-timezone')
 //database connect
 const Dd = require('../modal/input')
-let day = moment.tz("Asia/Kuala_Lumpur").format("lll")
+
 exports.create = (req,res)=>{
     if(!req.body){
         res 
@@ -17,8 +17,8 @@ bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
 
-date:day,
-dat:new Date()
+date:moment.tz("Asia/Kuala_Lumpur").format("llll"),
+
 
 
 
