@@ -21,15 +21,16 @@ router.get('/',async(req,res)=>{
          c+=d[x].credit;
      }
      let e =0;
-     if(!b == ''){
+     
         e = a-b;
-     }
+     
+     b>0?b:f
      let f =0;
-     if(!c == ''){
+    
         f = b-c;
-     }
+     
      console.log(e);
-    res.render('index',{user:d,bank:e,hand:f,credit:c})
+    res.render('index',{user:d,bank:b==0?a:e,hand:c==0?b:f,credit:c})
    })
    .catch((err=>{
        res.status(450).send({message:err.message})
