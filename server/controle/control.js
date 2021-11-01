@@ -32,7 +32,7 @@ res.send({message:err.message});
 }
 
 exports.find =(req,res)=>{
-   Dd.find().sort('-date')
+   Dd.find().sort('-dat')
     .then((data)=>{
         res.send(data)
     })

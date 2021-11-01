@@ -13,10 +13,12 @@ credit:{
     type:Number
 },
 date:{
-    type:Date
+    type:String
     
 },
-
+dat:{
+    type:Date
+}
 });
 
 const inputData = mongoose.model('Input',s);
