@@ -17,7 +17,7 @@ bank:req.body.bank,
 hand:req.body.hand,
 credit:req.body.credit,
 
-date:moment.tz("Asia/Kuala_Lumpur").format("llll"),
+date:moment.tz("Asia/Kuala_Lumpur").format("LLL"),
 
 
 
