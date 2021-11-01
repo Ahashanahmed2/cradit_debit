@@ -1,6 +1,6 @@
 
 //export dependences
-const moment = require('moment')
+const moment = require('moment-timezone')
 //database connect
 const Dd = require('../modal/input')
 
