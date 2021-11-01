@@ -10,27 +10,29 @@ const api = require('../server/controle/control');
 router.get('/',async(req,res)=>{
   await axios.get(`${process.env.WEB_URL}api/find`)
    .then((da)=>{
-     let d = da.data;
+
+
+     let db_data = da.data;
+
      let a =0;
      let b =0;
      let c =0;
-     for(let x in d){
+     for(let x in db_data){
        
          a+=d[x].bank;
          b+=d[x].hand;
          c+=d[x].credit;
      }
-     let e =0;
      
+     let e =0;
         e = a-b;
      
-     b>0?b:f
-     let f =0;
     
+     let f =0;
         f = b-c;
      
-     console.log(e);
-    res.render('index',{user:d,bank:b==0?a:e,hand:c==0?b:f,credit:c})
+     
+    res.render('index',{user:db_data,bank:b==0?a:e,hand:c==0?b:f,credit:c})
    })
    .catch((err=>{
        res.status(450).send({message:err.message})
