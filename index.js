@@ -17,7 +17,7 @@ env.config();
 http.createServer(app)
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'images')))
+app.use('/images',express.static(path.join(__dirname,'images')))
 app.set('view engine','ejs')
 //database connected
 mongoose.connect(process.env.DB)
