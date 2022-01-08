@@ -13,12 +13,14 @@ router.get('/',async(req,res)=>{
 
 
      let db_data = da.data;    let u =0;
-    let m=0;
-    let i=0;
+   
 
-     let a =parseFloat(0).toFixed(2);
-     let b =parseFloat(0).toFixed(2);
-     let c =parseFloat(0).toFixed(2);
+     let a =0;
+         Number.parseFloat(a).toFixed(2);
+     let b =0;
+         Number.parseFloat(b).toFixed(2);
+     let c =0;
+         Number.parseFloat(c).toFixed(2);
      for(let x in db_data){
        
          a+=db_data[x].bank;
