@@ -13,9 +13,9 @@ router.get('/',async(req,res)=>{
 
 
      let db_data = da.data;
-    let u;
-    let m;
-    let i;
+    let u =0;
+    let m=0;
+    let i=0;
 
      let a =parseFloat(u).toFixed(2);
      let b =parseFloat(m).toFixed(2);
