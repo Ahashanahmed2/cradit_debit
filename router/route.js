@@ -23,9 +23,9 @@ router.get('/',async(req,res)=>{
      
      for(let x in db_data){
        
-        a+= parseInt(db_data[x].bank);
-         b+=parseInt(db_data[x].hand);
-        c+=parseInt(db_data[x].credit);
+        a+= Number.parseInt(db_data[x].bank);
+         b+=Number.parseInt(db_data[x].hand);
+        c+=Number.parseInt(db_data[x].credit);
      }
 
      let e =0;
