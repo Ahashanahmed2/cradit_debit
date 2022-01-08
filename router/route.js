@@ -12,19 +12,18 @@ router.get('/',async(req,res)=>{
    .then((da)=>{
 
 
-     let db_data = da.data;
-    let u =0;
+     let db_data = da.data;    let u =0;
     let m=0;
     let i=0;
 
-     let a =parseFloat(u).toFixed(2);
-     let b =parseFloat(m).toFixed(2);
-     let c =parseFloat(i).toFixed(2);
+     let a =parseFloat(0).toFixed(2);
+     let b =parseFloat(0).toFixed(2);
+     let c =parseFloat(0).toFixed(2);
      for(let x in db_data){
        
-         u+=db_data[x].bank;
-         m+=db_data[x].hand;
-         i+=db_data[x].credit;
+         a+=db_data[x].bank;
+         b+=db_data[x].hand;
+         c+=db_data[x].credit;
      }
 
      let e =0;
