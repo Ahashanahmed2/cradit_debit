@@ -16,11 +16,11 @@ router.get('/',async(req,res)=>{
    
 
      let a =0;
-         Number.parseFloat(a).toFixed(2);
+         a.toFixed(2);
      let b =0;
-         Number.parseFloat(b).toFixed(2);
+     b.toFixed(2);
      let c =0;
-         Number.parseFloat(c).toFixed(2);
+       c.toFixed(2);
      for(let x in db_data){
        
          a+=db_data[x].bank;
