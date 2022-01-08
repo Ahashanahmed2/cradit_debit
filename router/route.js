@@ -16,16 +16,16 @@ router.get('/',async(req,res)=>{
    
 
      let a =0;
-         a.toFixed(2);
+        
      let b =0;
-     b.toFixed(2);
+    
      let c =0;
-       c.toFixed(2);
+     
      for(let x in db_data){
        
-         a+=db_data[x].bank;
-         b+=db_data[x].hand;
-         c+=db_data[x].credit;
+        parseInt(a)+=db_data[x].bank;
+         parseInt(b)+=db_data[x].hand;
+         parseInt(c)+=db_data[x].credit;
      }
 
      let e =0;
